@@ -2,7 +2,7 @@ CREATE TABLE Drivers (
     driver_id INT PRIMARY KEY,
     driver_name VARCHAR(100),
     status VARCHAR(20),
-    trust_score INT,
+    trust_score INT CHECK(trust_score >=0),
     distance_km DECIMAL(10, 2)
 );
 
